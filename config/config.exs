@@ -34,6 +34,7 @@ config :riak_core,
   handoff_port: 8099,
   handoff_ip: '127.0.0.1',
   schema_dirs: ['priv']
+
 config :sasl,
   errlog_type: :error
 

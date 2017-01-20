@@ -1,4 +1,4 @@
-defmodule RiakPlaygound.Mixfile do
+defmodule RiakPlayground.Mixfile do
   use Mix.Project
 
   def project do
@@ -16,7 +16,7 @@ defmodule RiakPlaygound.Mixfile do
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger],
-     mod: {RiakPlaygound.Application, []}]
+     mod: {RiakPlayground.Application, []}]
   end
 
   # Dependencies can be Hex packages:

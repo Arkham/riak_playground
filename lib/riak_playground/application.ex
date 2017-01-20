@@ -1,22 +1,15 @@
-defmodule RiakPlaygound.Application do
-  # See http://elixir-lang.org/docs/stable/elixir/Application.html
-  # for more information on OTP Applications
-  @moduledoc false
-
+defmodule RiakPlayground.Application do
   use Application
+  require Logger
 
   def start(_type, _args) do
-    import Supervisor.Spec, warn: false
-
-    # Define workers and child supervisors to be supervised
-    children = [
-      # Starts a worker by calling: RiakPlaygound.Worker.start_link(arg1, arg2, arg3)
-      # worker(RiakPlaygound.Worker, [arg1, arg2, arg3]),
-    ]
-
-    # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
-    # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: RiakPlaygound.Supervisor]
-    Supervisor.start_link(children, opts)
+    case RiakPlayground.Supervisor.start_link do
+      {:ok, pid} ->
+        :ok = :riak_core.register(vnode_module: RiakPlayground.VNode)
+        :ok = :riak_core_node_watcher.service_up(RiakPlayground.Service, self())
+        {:ok, pid}
+      {:error, reason} ->
+        Logger.error("Unable to start RiakPlayground Supervisor because #{inspect(reason)}")
+    end
   end
 end

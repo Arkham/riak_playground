@@ -1,4 +1,4 @@
-# RiakPlaygound
+# RiakPlayground
 
 **TODO: Add description**
 

@@ -1,6 +1,6 @@
-defmodule RiakPlaygoundTest do
+defmodule RiakPlaygroundTest do
   use ExUnit.Case
-  doctest RiakPlaygound
+  doctest RiakPlayground
 
   test "the truth" do
     assert 1 + 1 == 2
