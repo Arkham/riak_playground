@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :riak_gpad, key: :value
+#     config :riak_playground, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:riak_gpad, :key)
+#     Application.get_env(:riak_playground, :key)
 #
 # Or configure a 3rd-party app:
 #

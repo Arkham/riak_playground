@@ -1,6 +1,6 @@
-defmodule RiakGpad do
+defmodule RiakPlaygound do
   @moduledoc """
-  Documentation for RiakGpad.
+  Documentation for RiakPlaygound.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule RiakGpad do
 
   ## Examples
 
-      iex> RiakGpad.hello
+      iex> RiakPlaygound.hello
       :world
 
   """

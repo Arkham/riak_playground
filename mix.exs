@@ -1,8 +1,8 @@
-defmodule RiakGpad.Mixfile do
+defmodule RiakPlaygound.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :riak_gpad,
+    [app: :riak_playground,
      version: "0.1.0",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
@@ -16,7 +16,7 @@ defmodule RiakGpad.Mixfile do
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
     [extra_applications: [:logger],
-     mod: {RiakGpad.Application, []}]
+     mod: {RiakPlaygound.Application, []}]
   end
 
   # Dependencies can be Hex packages:
